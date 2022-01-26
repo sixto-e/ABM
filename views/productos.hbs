@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">nombre</th>
+      <th scope="col">descripcion</th>
+      <th scope="col">precio</th>
+      <th scope="col">eliminar</th>
+      <th scope="col">modificar</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each allProd}}
+    <tr>
+      <th>{{id}} </th>
+      <th>{{nombre}}</th>
+      <th>{{descripcion}} </th>
+      <th>${{precio}}</th>
+      <th><a href="/productos/eliminar/{{id}}"><i style="color:red;" class='bx bxs-trash-alt'></i></a></th>
+      <th><a href="/productos/modificar/{{id}}"><i class='bx bx-edit'></i></a></th>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a class="btn btn-success" href="/productos/create">agregar producto</a>

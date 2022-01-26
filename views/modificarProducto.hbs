@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        {{#each producto}}
+        <form  action="/productos/modificar/{{id}}" method="post">
+        <label for="nombre">nombre del producto</label>
+        <input class="form-control" type="text" name="nombre" value="{{nombre}}">
+    
+        <label for="descripcion">descripcion del producto</label>
+        <input class="form-control" type="text" name="descripcion" value="{{descripcion}}">
+        
+        <label for="precio">precio</label>
+        <input class="form-control" type="text" name="precio" value="{{precio}}">
+        <br>
+        <button class="btn btn-primary" type="submit">enviar</button>
+        </form>
+        {{/each}}
+    </div>
+</div>
